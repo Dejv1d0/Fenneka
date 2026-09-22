@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Fenneka.Api/Fenneka.Api/Fenneka.Api.csproj" />
+  <Project Path="Fenneka.Mobile/Fenneka.Mobile/Fenneka.Mobile.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>

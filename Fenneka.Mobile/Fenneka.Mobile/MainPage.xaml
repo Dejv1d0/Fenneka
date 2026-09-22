@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:droid="clr-namespace:CommunityToolkit.Maui.PlatformConfiguration.AndroidSpecific;assembly=CommunityToolkit.Maui"
+    
+    x:Class="Fenneka.Mobile.MainPage"
+    
+    droid:NavigationBar.Style="DarkContent"
+    
+    Shell.NavBarIsVisible="False"
+    SafeAreaEdges="None">
+
+    <!-- CAŁY EKRAN -->
+    <Grid
+        RowDefinitions="320, *"
+        SafeAreaEdges="None">
+
+
+        <!-- ========================= -->
+        <!-- HERO -->
+        <!-- ========================= -->
+
+        <Grid
+            Grid.Row="0"
+            SafeAreaEdges="None">
+
+            <Image
+                Source="mountains.png"
+                Aspect="AspectFill" />
+            
+            <!--
+            <BoxView
+                BackgroundColor="#55000000" />
+            -->
+            
+            <Grid
+                Padding="20,0,20,60"
+                ColumnDefinitions="*, auto">
+                
+                <VerticalStackLayout
+                    Grid.Column="0">
+
+                    <Image
+                        HorizontalOptions="Start"
+                        Source="school_logo.png"
+                        HeightRequest="110" />
+
+                    <Label
+                        Text="Cześć Paweł 👋"
+                        TextColor="White"
+                        FontSize="26"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Start" />
+
+                    <Label
+                        Text="Twój rozwój językowy, 
+                        zaczyna się tutaj 💪"
+                        TextColor="White"
+                        FontSize="18"
+                        HorizontalTextAlignment="Start" />
+
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Grid.Column="1"
+                    Spacing="10">
+                    
+                    <VerticalStackLayout
+                        VerticalOptions="Start"
+                        HorizontalOptions="End"
+                        WidthRequest="50"
+                        HeightRequest="50">
+
+                        <Border
+                            Margin="0,0,15,-10"
+                            Grid.Column="1"
+                            VerticalOptions="Start"
+                            HorizontalOptions="End"
+                            WidthRequest="10"
+                            HeightRequest="10"
+                            BackgroundColor="{StaticResource Primary}"
+                            ZIndex="10"
+                            Stroke="Transparent">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="100"/>
+                            </Border.StrokeShape>
+                        </Border>
+                    
+                        <Image
+                            Source="bell.png"
+                            WidthRequest="25"
+                            HeightRequest="25"/>
+
+                    </VerticalStackLayout>
+
+                    <Image
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        Source="man.png"/>
+
+                    <Border
+                        Grid.Column="1"
+                        WidthRequest="150"
+                        VerticalOptions="End"
+                        BackgroundColor="#0B1F33"
+                        Stroke="Gray"
+                        StrokeThickness="0.3"
+                        Padding="10">
+
+                        <Border.StrokeShape>
+                            <RoundRectangle
+                                CornerRadius="15" />
+                        </Border.StrokeShape>
+
+                        <VerticalStackLayout
+                            Spacing="3">
+                            <Label
+                                Text=" &quot;Granice mojego języka są granicami mojego świata.&quot;"
+                                TextColor="White"
+                                FontSize="11"
+                                HorizontalTextAlignment="Center"
+                                FontAttributes="Italic"/>
+                            <Label
+                                HorizontalTextAlignment="Center"
+                                Text="Ludwig Wittgenstein"
+                                FontSize="10"
+                                TextColor="LightGray"/>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                </VerticalStackLayout>
+            </Grid>
+            
+        </Grid>
+
+
+        <!-- ========================= -->
+        <!-- GŁÓWNA BIAŁA SEKCJA -->
+        <!-- ========================= -->
+
+        <Border
+            Grid.Row="1"
+            Margin="0,-50,0,0"
+            BackgroundColor="White"
+            ZIndex="10">
+
+            <Border.StrokeShape>
+                <RoundRectangle
+                    CornerRadius="25,25,0,0" />
+            </Border.StrokeShape>
+
+            <ScrollView
+                VerticalScrollBarVisibility="Never">
+                <VerticalStackLayout
+                        Padding="0"
+                        Spacing="0">
+
+                    <!--SEKCJA NADCHODZĄCE ZAJĘCIA-->
+                    <Border
+                        Margin="20"
+                        BackgroundColor="White">
+
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="25"/>
+                        </Border.StrokeShape>
+
+                        <VerticalStackLayout>
+
+                            <Label
+                                Padding="20, 20, 0, 0"
+                                Text="Nadchodzące zajęcia"
+                                Style="{StaticResource SubHeadline}"/>
+
+                            <Grid
+                                RowDefinitions="auto, 44">
+                            
+                                <Grid
+                                    Padding="20"
+                                    Grid.Row="0"
+                                    ColumnSpacing="20"
+                                    ColumnDefinitions="auto, *">
+
+                                    <Image
+                                        Grid.Column="0"
+                                        Source="uk.png"
+                                        WidthRequest="50"/>
+
+                                    <Grid
+                                        Grid.Column="1"
+                                        RowDefinitions="auto, auto"
+                                        ColumnDefinitions="*, auto">
+
+                                        <Grid
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            ColumnDefinitions="*, auto">
+                                            <Label
+                                                Grid.Column="0"
+                                                Text="Angielski"
+                                                Style="{StaticResource SubHeadline}"/>
+                                            <Image
+                                                Grid.Column="1"
+                                                WidthRequest="25"
+                                                Source="rightarrow.png"/>
+                                        </Grid>
+                                    
+                                        <Label
+                                            Grid.Row="1"
+                                            Text="Oddział 1 - Sala B1 - 2 razy w tygidniu"
+                                            Style="{StaticResource SecondaryText}"/>
+                                    </Grid>
+                                
+                                </Grid>
+
+
+                                <Border
+                                    Grid.Row="1"
+                                    BackgroundColor="{StaticResource Primary}">
+
+                                    <Button
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"
+                                        Text="Zobacz szczegóły lekcji"/>
+
+                                </Border>
+                            
+                            </Grid>
+                        </VerticalStackLayout>
+                    
+                    </Border>
+                    <!--SEKCJA NADCHODZĄCE ZAJĘCIA-->
+                    
+
+                    <!-- SEKCJA W CIĄGU TYGODNIA -->
+                    <Grid
+                        Margin="20,0,20,0" 
+                        ColumnDefinitions="*, *">
+                        
+                        <Label
+                            Grid.Column="0"
+                            Text="W ciągu tygodnia"
+                            FontSize="22"
+                            FontAttributes="Bold" />
+                        
+                        <HorizontalStackLayout
+                            HorizontalOptions="End"
+                            Grid.Column="1"
+                            Margin="0,0,0,0">
+
+                            <HorizontalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="GoToCalendar"/>
+                            </HorizontalStackLayout.GestureRecognizers>
+
+                            <Label
+                                VerticalOptions="Center"
+                                Text="Zobacz wszystkie"
+                                Style="{StaticResource SecondaryText}"/>
+
+                            <Image
+                                VerticalOptions="Center"
+                                Source="rightarrow.png"
+                                WidthRequest="20"/>
+                        </HorizontalStackLayout>
+                        
+                    </Grid>
+                    
+
+                    <CollectionView
+                            ItemsSource="{Binding Courses}"
+                            ItemsLayout="HorizontalList"
+                            HorizontalScrollBarVisibility="Never">
+
+                        <CollectionView.ItemTemplate>
+
+                            <DataTemplate>
+
+                                <Border 
+                                    BackgroundColor="White"
+                                    WidthRequest="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.ScreenWidth}"
+                                    Margin="20,10,0,10">
+
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="25"/>
+                                    </Border.StrokeShape>
+
+                                    <VerticalStackLayout>
+
+                                        <Grid
+                                            RowDefinitions="auto, 44">
+
+                                            <Grid
+                                                Padding="20"
+                                                Grid.Row="0"
+                                                ColumnSpacing="20"
+                                                ColumnDefinitions="auto, *">
+
+                                                <Image
+                                                    Grid.Column="0"
+                                                    Source="{Binding image}"
+                                                    WidthRequest="50"/>
+
+                                                <Grid
+                                                    Grid.Column="1"
+                                                    RowDefinitions="auto, auto"
+                                                    ColumnDefinitions="*, auto">
+
+                                                    <Grid
+                                                        Grid.Row="0"
+                                                        Grid.Column="0"
+                                                        ColumnDefinitions="*, auto">
+
+                                                        <Label
+                                                            Grid.Column="0"
+                                                            Text="{Binding name}"
+                                                            Style="{StaticResource SubHeadline}"/>
+
+                                                    </Grid>
+
+                                                    <VerticalStackLayout
+                                                        Grid.Row="1">
+                                                        <Label
+                                                            Text="{Binding date}"
+                                                            Style="{StaticResource SecondaryText}"/>
+
+                                                        <Label
+                                                            Text="{Binding hour}"
+                                                            Style="{StaticResource SecondaryText}"/>
+
+                                                        <Label
+                                                            Text="{Binding localization}"
+                                                            Style="{StaticResource SecondaryText}"/>
+
+                                                        <Label
+                                                            Text="{Binding teacher}"
+                                                            Style="{StaticResource SecondaryText}"/>
+                                                    </VerticalStackLayout>
+                                                </Grid>
+
+                                            </Grid>
+
+
+                                            <Border
+                                                Grid.Row="1"
+                                                BackgroundColor="{StaticResource Primary}">
+
+                                                <Button
+                                                    VerticalOptions="Center"
+                                                    HorizontalOptions="Center"
+                                                    Text="Zobacz szczegóły lekcji"
+                                                    Clicked="LessonInfo"/>
+
+                                            </Border>
+
+                                        </Grid>
+
+                                    </VerticalStackLayout>
+                                    
+                                </Border>
+
+                            </DataTemplate>
+
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+                    <!-- SEKCJA W CIĄGU TYGODNIA -->
+                    
+
+                    <Label
+                        Margin="20,20,20,10"
+                        Text="Twój postęp"
+                        FontSize="22"
+                        FontAttributes="Bold" />
+                
+                    <!-- DALSZY CONTENT -->
+
+                    
+                    <!-- tutaj potem kolejne sekcje -->
+
+                </VerticalStackLayout>
+            </ScrollView>
+        </Border>
+
+    </Grid>
+
+</ContentPage>

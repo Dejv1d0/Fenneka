@@ -1,0 +1,21 @@
+@Fenneka.Api_HostAddress = http://localhost:5126
+
+### Pobierz wszystkich uczniów
+
+GET {{Fenneka.Api_HostAddress}}/api/students
+Accept: application/json
+
+### Pobierz ucznia o ID 1
+
+GET {{Fenneka.Api_HostAddress}}/api/students/1
+Accept: application/json
+
+### Dodaj nowego ucznia
+
+POST {{Fenneka.Api_HostAddress}}/api/students
+Content-Type: application/json
+
+{
+    "name": "Anna",
+    "email": "anna_wolak80@interia.pl"
+}
